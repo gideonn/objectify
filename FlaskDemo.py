@@ -1,3 +1,5 @@
+####### Author: Abhishek Srivastava ######
+
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 import os
