@@ -1,0 +1,13 @@
+flask
+flask-uploads
+google-api-python-client
+gTTS
+pillow
+google-auth
+google-cloud-core
+google-cloud-translate
+googleapis-common-protos
+itsdangerous
+httplib2
+oauth2client
+protobuf
