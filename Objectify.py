@@ -80,25 +80,29 @@ def identifyandtranslate(photo_file,filename,lang):
         tts.save(photo_file + ".mp3")
 
         #Overlay translation here
-        font1 = ImageFont.truetype("static/fonts/GOTHIC.TTF", 60)
-        font2 = ImageFont.truetype("static/fonts/NotoSansUI-Regular.ttf", 60)
+        font1 = ImageFont.truetype("/home/ubuntu/.fonts/GOTHIC.TTF", 60)
+        font2 = ImageFont.truetype("/home/ubuntu/.fonts/f1.ttf", 60)
         if(lang == "hi"):
-            font2 = ImageFont.truetype("static/fonts/hindi.ttf", 60)
+            font2 = ImageFont.truetype("/home/ubuntu/.fonts/aparaj.ttf", 60)
         elif lang == "zh-CN" or lang == "zh-TW":
-            font2 = ImageFont.truetype("static/fonts/simsun.ttc", 60)
-        tcolor = (0, 0, 0)
+            font2 = ImageFont.truetype("/home/ubuntu/.fonts/simsun.ttc", 60)
+        tcolor = (250, 250, 250)
         text_pos = (50, 50)
 
         img = Image.open(photo_file)
         draw = ImageDraw.Draw(img)
-        draw.text(text_pos, text, fill=(255,255,255,128), font=font1)
+        print(text_pos)
+        print(text)
+        print(tcolor)
+        print(font1)
+        draw.text(text_pos, text, fill = tcolor, font=font1)
         del draw
 
         img.save(photo_file)
 
         text_pos = (50, 150)
         draw = ImageDraw.Draw(img)
-        draw.text(text_pos, translated_text, fill=(255,255,255,128), font=font2)
+        draw.text(text_pos, translated_text, fill = tcolor, font=font2)
         del draw
 
         img.save(photo_file)
@@ -128,4 +132,4 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', debug=True)
