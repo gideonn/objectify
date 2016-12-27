@@ -82,6 +82,7 @@ def identifyandtranslate(photo_file,filename,lang):
         #Overlay translation here
         font1 = ImageFont.truetype("/home/ubuntu/.fonts/GOTHIC.TTF", 60)
         font2 = ImageFont.truetype("/home/ubuntu/.fonts/f1.ttf", 60)
+        #Special handling of Hindi and Chinese translations
         if(lang == "hi"):
             font2 = ImageFont.truetype("/home/ubuntu/.fonts/aparaj.ttf", 60)
         elif lang == "zh-CN" or lang == "zh-TW":
@@ -97,16 +98,13 @@ def identifyandtranslate(photo_file,filename,lang):
         print(font1)
         draw.text(text_pos, text, fill = tcolor, font=font1)
         del draw
-
         img.save(photo_file)
 
         text_pos = (50, 150)
         draw = ImageDraw.Draw(img)
         draw.text(text_pos, translated_text, fill = tcolor, font=font2)
         del draw
-
         img.save(photo_file)
-
         return(translated_text)
 
 ###
