@@ -30,7 +30,7 @@ You can see the app live here: https://goo.gl/DQcB0z
 ----------
 ## Installation:
 
-The app is written in Python3.
+The app is written in Python3 and uses Flask for the web app.
 Check the requirements.txt to know which additional packages are needed.
 I'm listing the major ones here:
 
