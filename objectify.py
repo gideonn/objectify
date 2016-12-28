@@ -22,7 +22,9 @@ photos = UploadSet('photos', IMAGES)
 
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/images'
 app.config['UPLOAD_FOLDER'] = 'static/images'
+
 configure_uploads(app,photos)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/ubuntu/Personal/auth/Google/VisionAPI/ServiceAccount.json"
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 ###
@@ -131,4 +133,4 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
