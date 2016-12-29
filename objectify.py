@@ -90,6 +90,9 @@ def identifyandtranslate(photo_file,filename,lang):
             font2 = ImageFont.truetype("/home/ubuntu/.fonts/aparaj.ttf", 60)
         elif lang == "zh-CN" or lang == "zh-TW":
             font2 = ImageFont.truetype("/home/ubuntu/.fonts/simsun.ttc", 60)
+        elif lang == "ar":
+            font2 = ImageFont.truetype("/home/ubuntu/.fonts/arabic.ttf",60)
+
         tcolor = (250, 250, 250)
         text_pos = (50, 50)
 
