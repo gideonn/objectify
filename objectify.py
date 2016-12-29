@@ -1,5 +1,5 @@
 ####### Author: Abhishek Srivastava ######
-
+#Change 1 - Optimize file size so that Google Vision API doesn't fail
 
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
@@ -16,6 +16,7 @@ import PIL
 from PIL import ImageFont
 from PIL import Image
 from PIL import ImageDraw
+from PIL import ImageOps
 
 app = Flask(__name__,static_url_path='/static')
 photos = UploadSet('photos', IMAGES)
@@ -36,6 +37,11 @@ def identifyandtranslate(photo_file,filename,lang):
     credentials = GoogleCredentials.get_application_default()
     service = discovery.build('vision', 'v1', credentials=credentials)
     # [END authenticate]
+
+    #Change 1
+    #Reduce image file size so that Google Vision API doesn't fail
+    img = Image.open(photo_file)
+    img.save(photo_file, optimize=True, quality=70)
 
     # [START construct_request]
     with open(photo_file, 'rb') as image:
