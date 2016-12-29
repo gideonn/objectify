@@ -1,5 +1,6 @@
 ####### Author: Abhishek Srivastava ######
 #Change 1 - Optimize file size so that Google Vision API doesn't fail
+#Change 2 - Fix for Arabic language, added separate font
 
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
@@ -96,6 +97,7 @@ def identifyandtranslate(photo_file,filename,lang):
             font2 = ImageFont.truetype("/home/ubuntu/.fonts/aparaj.ttf", 60)
         elif lang == "zh-CN" or lang == "zh-TW":
             font2 = ImageFont.truetype("/home/ubuntu/.fonts/simsun.ttc", 60)
+        #change #2
         elif lang == "ar":
             font2 = ImageFont.truetype("/home/ubuntu/.fonts/arabic.ttf",60)
 
