@@ -1,6 +1,7 @@
 ####### Author: Abhishek Srivastava ######
 #Change 1 - Optimize file size so that Google Vision API doesn't fail
 #Change 2 - Fix for Arabic language, added separate font
+#Change 3 - Added border around result image for better view
 
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
@@ -119,6 +120,8 @@ def identifyandtranslate(photo_file,filename,lang):
         draw.text(text_pos, translated_text, fill = tcolor, font=font2)
         del draw
         img.save(photo_file)
+        #Change 3
+        ImageOps.expand(Image.open(photo_file),border=10,fill='black').save(photo_file)
         return(translated_text)
 
 ###
