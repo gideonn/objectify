@@ -26,8 +26,10 @@ The app takes in language and image as an input, identifies an object in the ima
 
 ## Demo:
 You can see the app live here: https://goo.gl/DQcB0z
-Note: Google Vision API has size limits on the image. The app throws error when you try uploading image of huge size.
-The app also throws error if the image uploaded doesn't have one of these as their extensions (.jpg, .jpe, .jpeg, .png, .gif, .svg, and .bmp)
+Note: ~Google Vision API has size limits on the image. The app throws error when you try uploading image of huge size.~ fixed with optimization of image upload
+The app also throws error if the image uploaded doesn't have one of these as their extensions (.jpg, .jpe, .jpeg, .png, .gif, and .bmp)
+
+
 ----------
 ## Installation:
 
