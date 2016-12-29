@@ -2,6 +2,7 @@
 #Change 1 - Optimize file size so that Google Vision API doesn't fail
 #Change 2 - Fix for Arabic language, added separate font
 #Change 3 - Added border around result image for better view
+#Change 4 - Making font URLs dynamic
 
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
@@ -33,6 +34,8 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 ###
 
 def identifyandtranslate(photo_file,filename,lang):
+    #Change 4
+    cur_path = os.getcwd()
     """Run a label request on a single image"""
 
     # [START authenticate]
@@ -91,16 +94,17 @@ def identifyandtranslate(photo_file,filename,lang):
         tts.save(photo_file + ".mp3")
 
         #Overlay translation here
-        font1 = ImageFont.truetype("/home/ubuntu/.fonts/GOTHIC.TTF", 60)
-        font2 = ImageFont.truetype("/home/ubuntu/.fonts/f1.ttf", 60)
+        #Change 4: Making font urls dynamic
+        font1 = ImageFont.truetype(cur_path + "/static/fonts/GOTHIC.TTF", 60)
+        font2 = ImageFont.truetype(cur_path + "/static/fonts/f1.ttf", 60)
         #Special handling of Hindi and Chinese translations
         if(lang == "hi"):
-            font2 = ImageFont.truetype("/home/ubuntu/.fonts/aparaj.ttf", 60)
+            font2 = ImageFont.truetype(cur_path + "/static/fonts/aparaj.ttf", 60)
         elif lang == "zh-CN" or lang == "zh-TW":
-            font2 = ImageFont.truetype("/home/ubuntu/.fonts/simsun.ttc", 60)
-        #change #2
+            font2 = ImageFont.truetype(cur_path + "/static/fonts/simsun.ttc", 60)
         elif lang == "ar":
-            font2 = ImageFont.truetype("/home/ubuntu/.fonts/arabic.ttf",60)
+            font2 = ImageFont.truetype(cur_path + "/static/fonts/arabic.ttf",60)
+
 
         tcolor = (250, 250, 250)
         text_pos = (50, 50)
