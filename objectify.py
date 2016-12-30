@@ -106,7 +106,7 @@ def identifyandtranslate(photo_file,filename,lang):
             font2 = ImageFont.truetype(cur_path + "/static/fonts/arabic.ttf",60)
 
 
-        tcolor = (250, 250, 250)
+        tcolor = (215, 215, 215)
         text_pos = (50, 50)
 
         img = Image.open(photo_file)
