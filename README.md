@@ -25,7 +25,7 @@ The app takes in language and image as an input, identifies an object in the ima
 
 
 ## Demo:
-You can see the app live here: https://goo.gl/DQcB0z
+You can see the app live here: ~~https://goo.gl/DQcB0z~~  objectify.eastus.cloudapp.azure.com
 
 Note: ~~Google Vision API has size limits on the image. The app throws error when you try uploading image of huge size.~~ fixed with optimization of image upload
 
