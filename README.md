@@ -47,7 +47,7 @@ I'm listing the major ones here:
     - gTTS 
     - pillow
 
-I used Apache for hosting the app on EC2 instance - Objectify! (https://goo.gl/DQcB0z). 
+I used Apache for hosting the app on ~~EC2 instance~~ Azure - Objectify! ~~(https://goo.gl/DQcB0z)~~ (objectify.eastus.cloudapp.azure.com). 
 As with any other apache backed web app, you need a .wsgi file and a .conf file.
 I've added the working versions in the source, you're free to modify them for your own apps.
 
