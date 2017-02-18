@@ -22,10 +22,10 @@ The app takes in language and image as an input, identifies an object in the ima
 
 
 ----------
-
+### EDIT: Moved to Microsoft Vision API from Google Cloud Vision API
 
 ## Demo:
-You can see the app live here: ~~https://goo.gl/DQcB0z~~  objectify.eastus.cloudapp.azure.com
+You can see the app live here: ~~https://goo.gl/DQcB0z~~  http://objectify.eastus.cloudapp.azure.com
 
 Note: ~~Google Vision API has size limits on the image. The app throws error when you try uploading image of huge size.~~ fixed with optimization of image upload
 
@@ -47,7 +47,7 @@ I'm listing the major ones here:
     - gTTS 
     - pillow
 
-I used Apache for hosting the app on ~~EC2 instance~~ Azure - Objectify! ~~(https://goo.gl/DQcB0z)~~ (objectify.eastus.cloudapp.azure.com). 
+I used Apache for hosting the app on ~~EC2 instance~~ Azure - Objectify! ~~(https://goo.gl/DQcB0z)~~ (http://objectify.eastus.cloudapp.azure.com). 
 As with any other apache backed web app, you need a .wsgi file and a .conf file.
 I've added the working versions in the source, you're free to modify them for your own apps.
 
