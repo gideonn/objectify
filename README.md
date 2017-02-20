@@ -28,6 +28,11 @@ The demo may not work as of now since my free trial with Google Cloud APIs ended
 ## Demo:
 You can see the app live here: ~~https://goo.gl/DQcB0z~~  http://objectify.eastus.cloudapp.azure.com
 
+## Screenshots
+![Main Screen](http://i.imgur.com/hXN4f9t.jpg)
+![Upload page](http://i.imgur.com/x8jHjil.jpg)
+![Result](http://i.imgur.com/3PtvxtO.jpg)
+
 Note: ~~Google Vision API has size limits on the image. The app throws error when you try uploading image of huge size.~~ fixed with optimization of image upload
 
 The app also throws error if the image uploaded doesn't have one of these as their extensions (.jpg, .jpe, .jpeg, .png, .gif, and .bmp)
