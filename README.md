@@ -26,7 +26,9 @@ The app takes in language and image as an input, identifies an object in the ima
 The demo may not work as of now since my free trial with Google Cloud APIs ended. I'm working on replacing the full app with Microsoft APIs.
 
 ## Demo:
-You can see the app live here: ~~https://goo.gl/DQcB0z~~  http://objectify.eastus.cloudapp.azure.com
+You can see the app live here: ~~https://goo.gl/DQcB0z~~  ~~http://objectify.eastus.cloudapp.azure.com~~
+Sorry, but the app isn't live anymore. :(
+You can fork the project and run it on your local server.
 
 ## Screenshots
 ![Main Screen](http://i.imgur.com/hXN4f9t.jpg)
